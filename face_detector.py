@@ -10,14 +10,14 @@ cap = cv2.VideoCapture(0)
 recognizer = cv2.face.createLBPHFaceRecognizer()
 recognizer.load("recognizer/trainingData.yml")
 date = raw_input("Enter today's date (mm.dd.yy): ")
-file = "SignInSheets/" + date + ".csv"
+file = "SignIn_Sheets/" + date + ".csv"
 
 if os.path.isfile(file):
-    open(("SignInSheets/" + date + ".csv"), 'a')
-    writer = csv.writer(open(("SignInSheets/" + date + ".csv"), 'a'))
+    open(("SignIn_Sheets/" + date + ".csv"), 'a')
+    writer = csv.writer(open(("SignIn_Sheets/" + date + ".csv"), 'a'))
 else:
-    open(("SignInSheets/" + date + ".csv"), 'w')
-    writer = csv.writer(open(("SignInSheets/" + date + ".csv"), 'w'))
+    open(("SignIn_Sheets/" + date + ".csv"), 'w')
+    writer = csv.writer(open(("SignIn_Sheets/" + date + ".csv"), 'w'))
 
 logged_ID = 0
 detecting_ID = 0
