@@ -8,7 +8,7 @@ This is a face recognition sign in system that can replace written sign in sheet
 
 2. Download this repository
 
-3. Create a data set of a member's face. Add members one at a time by running ```python add_user.py```, entering a unique ID number (maybe student ID?), and having the member look directly into webcam. 
+3. Add members to the data set one at a time by running ```python add_user.py```, entering a unique ID number (maybe student ID?), and having the member look directly into webcam (make sure they're not too close!)
 
 4. Once all of the members have been added to the data set (check the folder face_set), run ```python trainer.py``` to create recognizer
 
