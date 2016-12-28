@@ -4,7 +4,7 @@ This is a face recognition sign in system that can replace written sign in sheet
 
 ##How to use:
 
-1. Install OpenCV and Python 2.7
+1. Install OpenCV, Python 2.7, and PILLOW (PIL)
 
 2. Download this repository
 
