@@ -22,6 +22,8 @@ else:
 logged_ID = 0
 detecting_ID = 0
 
+faces_detected = [0]
+
 while(687):
     ret, img = cap.read()
     gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
@@ -34,10 +36,19 @@ while(687):
             if (detecting_ID == 1):
                 face_detected = "Ted"
             elif (detecting_ID == 2):
-                face_detected = "Someone else"
+                face_detected = "Vincent"
+            elif (detecting_ID == 3):
+                face_detected = "Prisha"
             print(face_detected)
-            writer.writerow([face_detected])
-    cv2.imshow(date, img);
+            similarities = 0
+            for face in faces_detected:
+                if face_detected == face:
+                    similarities += 1
+            if similarities == 0:
+                writer.writerow([face_detected])
+            faces_detected.append(face_detected)
+
+    cv2.imshow("hi", img)
 
 cap.release()
 cv2.destroyAllWindows()

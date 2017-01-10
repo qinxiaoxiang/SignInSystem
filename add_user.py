@@ -18,6 +18,7 @@ while(687):
         index += 1
         cv2.imwrite("face_set/User." + str(id) + "." + str(index) + ".jpg", gray[y:y+h,x:x+w])
         cv2.rectangle(img, (x,y), (x+w,y+h), (0,255,0), 1)
+        print("i got u fam")
     cv2.imshow("Face",img);
     time.sleep(1)
     if(index>20):
